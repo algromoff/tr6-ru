@@ -1,10 +1,1500 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<title>tr6.ru</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TurboReels [TR6] Просмотры с 6 нулями</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23F58529'/%3E%3Cstop offset='50%25' stop-color='%23DD2A7B'/%3E%3Cstop offset='100%25' stop-color='%238134AF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Csvg x='12' y='12' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='13 2 3 14 12 14 11 22 21 10 12 10 13 2'/%3E%3C/svg%3E%3C/svg%3E">
+
+    <!-- SEO & Meta Tags -->
+    <meta name="description" content="TurboReels [TR6] Просмотры с 6 нулями. Создаем 300 видео в месяц из ваших исходников. Гарантированный трафик и подписчики для бизнеса.">
+    <meta name="keywords" content="продвижение reels, трафик из рилс, монтаж видео, генерация лидов, подписчики инстаграм, контент воронка">
+    <meta property="og:title" content="TurboReels [TR6] Просмотры с 6 нулями">
+    <meta property="og:description" content="Массовая экспансия: 300 роликов в месяц. Приведем целевых подписчиков за 30 дней.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+
+    <!-- Fonts: Gilroy (via cdnfonts) with Outfit as fallback -->
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/gilroy-medium" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Gilroy-Medium', 'Gilroy', 'Outfit', 'sans-serif'],
+                        bold: ['Gilroy-Bold', 'Gilroy', 'Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        bgDark: '#090514',
+                        bgCard: '#120A21',
+                        primary: '#DD2A7B',
+                        accent: '#8134AF',
+                        highlight: '#F58529',
+                        textMuted: '#9CA3AF'
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'ig-ai-gradient': 'linear-gradient(135deg, #F58529 0%, #DD2A7B 50%, #8134AF 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #090514;
+            color: #F3F4F6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6, .font-black, .font-bold, .font-extrabold {
+            font-family: 'Gilroy-Bold', 'Gilroy', 'Outfit', sans-serif !important;
+        }
+
+        /* Утилита Glassmorphism */
+        .glass {
+            background: rgba(18, 10, 33, 0.5);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card {
+            background: linear-gradient(145deg, rgba(28, 15, 50, 0.4) 0%, rgba(9, 5, 20, 0.8) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease, background 0.4s ease;
+        }
+
+        /* Градиентный текст */
+        .text-gradient {
+            background: linear-gradient(to right, #F58529, #DD2A7B, #8134AF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* 3D Смартфон (Интерактивный) */
+        .phone-mockup {
+            position: relative;
+            width: 280px;
+            height: 580px;
+            border-radius: 40px;
+            background: #090514;
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 25px 50px -12px rgba(221, 42, 123, 0.2), inset 0 0 20px rgba(0,0,0,1);
+            overflow: hidden;
+            cursor: grab;
+            touch-action: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
+        }
+        .phone-mockup:active {
+            cursor: grabbing;
+        }
+        .notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 25px;
+            background: #090514;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            z-index: 10;
+        }
+
+        /* Состояния выбранных доп. услуг */
+        .service-card {
+            cursor: pointer;
+        }
+        .service-card.selected {
+            border-color: rgba(221, 42, 123, 0.6);
+            background: rgba(221, 42, 123, 0.1);
+        }
+        .check-icon {
+            stroke: transparent;
+            transition: stroke 0.3s ease;
+        }
+        .service-card.selected .check-icon-container {
+            background-color: #DD2A7B;
+            border-color: #DD2A7B;
+        }
+        .service-card.selected .check-icon {
+            stroke: white;
+        }
+
+        /* Переход для спойлера */
+        .spoiler-content {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.5s ease;
+        }
+        .spoiler-content.open {
+            grid-template-rows: 1fr;
+        }
+        .spoiler-inner {
+            overflow: hidden;
+        }
+
+        /* Бесконечная карусель (Marquee) для аватаров */
+        .marquee-wrapper {
+            overflow: hidden;
+            position: relative;
+            /* Плавное растворение по краям экрана */
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .marquee-container {
+            display: flex;
+            width: max-content;
+            animation: marquee 25s linear infinite;
+        }
+        .marquee-container:hover {
+            animation-play-state: paused;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
 </head>
-<body>
-<h1>tr6.ru — сайт скоро будет здесь</h1>
+<body class="antialiased selection:bg-primary selection:text-white relative font-sans">
+
+    <!-- Интерактивная Нейросеть на фоне -->
+    <canvas id="neuralMesh" class="fixed inset-0 w-full h-full pointer-events-none z-[-2]"></canvas>
+
+    <!-- Свечения на фоне -->
+    <div class="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] bg-accent/20 rounded-full blur-[120px] pointer-events-none z-[-1]"></div>
+    <div class="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-highlight/15 rounded-full blur-[120px] pointer-events-none z-[-1]"></div>
+    <div class="fixed top-[30%] right-[10%] w-[40%] h-[40%] bg-primary/10 rounded-full blur-[150px] pointer-events-none z-[-1] animate-pulse"></div>
+
+    <!-- Навигация -->
+    <nav class="fixed w-full z-50 glass border-b border-white/5 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 rounded-xl bg-ig-ai-gradient flex items-center justify-center">
+                        <i data-lucide="zap" class="text-white w-6 h-6"></i>
+                    </div>
+                    <span class="font-black text-xl tracking-tight text-white uppercase">TurboReels <span class="text-highlight">[TR6]</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#how-it-works" class="text-sm font-semibold tracking-wide text-gray-400 hover:text-white transition-colors uppercase">Как это работает</a>
+                    <a href="#cases" class="text-sm font-semibold tracking-wide text-gray-400 hover:text-white transition-colors uppercase">Кейсы</a>
+                    <a href="#tariffs" class="text-sm font-semibold tracking-wide text-gray-400 hover:text-white transition-colors uppercase">Тарифы</a>
+                </div>
+                <div>
+                    <a href="#cta-section" class="bg-primary/10 hover:bg-primary text-white px-6 py-2.5 rounded-full text-sm font-bold tracking-wide backdrop-blur-sm transition-all border border-primary/30 hover:border-primary uppercase">
+                        Связаться
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Блок 1: Главный экран (Hero Section) -->
+        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-screen">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+                    
+                    <!-- Текстовый контент -->
+                    <div class="lg:col-span-7 text-center lg:text-left" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/10 mb-8 max-w-full">
+                            <span class="w-2 h-2 rounded-full bg-highlight animate-pulse shadow-[0_0_10px_rgba(245,133,41,0.8)] shrink-0"></span>
+                            <span class="text-[10px] sm:text-xs font-bold tracking-wider text-gray-300 uppercase truncate whitespace-normal leading-tight">Система TurboReels [TR6] Гарантируем в договоре Просмотры с 6 нулями</span>
+                        </div>
+                        
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight uppercase">
+                            Приведем от <span class="text-gradient">3000 подписчиков</span> и <span class="whitespace-nowrap">3 000 000</span> просмотров за 30 дней
+                        </h1>
+                        
+                        <p class="text-lg sm:text-xl text-textMuted mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
+                            Система «ТурбоРилс»: 6 дней в неделю создаем по 10 рилс в день. Трафик - до 15 рублей за живого подписчика <span class="text-white font-bold">(рекорд: 2,17 рубля и 32 млн просмотров за 60 дней ведения аккаунта)</span>. Твердые гарантии: не наберем подписчиков в срок - будем работать бесплатно пока не выполним план.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="#cta-section" class="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white bg-ig-ai-gradient rounded-full overflow-hidden transition-all hover:scale-105 shadow-[0_0_40px_rgba(221,42,123,0.5)] uppercase tracking-wide">
+                                <div class="absolute inset-0 w-full h-full bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <span class="relative flex items-center gap-2">
+                                    Записаться на аудит
+                                    <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Визуал / Интерактивный 3D Смартфон -->
+                    <div class="lg:col-span-5 mt-16 lg:mt-0 hidden md:flex justify-center relative" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                        <!-- Свечение позади телефона -->
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-ig-ai-gradient opacity-30 rounded-full blur-[80px] pointer-events-none"></div>
+                        
+                        <!-- Блок телефона (Стилизация под профиль) -->
+                        <div class="phone-mockup" id="interactivePhone">
+                            <div class="notch"></div>
+                            <div class="absolute inset-0 p-4 pt-12 flex flex-col gap-3 pointer-events-none text-white bg-gradient-to-b from-[#120A21] to-[#090514]">
+                                <!-- Header -->
+                                <div class="flex justify-between items-center px-1 mb-1">
+                                    <div class="font-bold text-[14px] tracking-wide">ai_gromov</div>
+                                    <div class="flex gap-[3px] flex-col">
+                                        <div class="w-4 h-[2px] bg-white rounded"></div>
+                                        <div class="w-4 h-[2px] bg-white rounded"></div>
+                                        <div class="w-4 h-[2px] bg-white rounded"></div>
+                                    </div>
+                                </div>
+                                <!-- Profile Info -->
+                                <div class="flex items-center gap-4">
+                                    <!-- Avatar -->
+                                    <div class="w-[64px] h-[64px] rounded-full p-[2px] bg-ig-ai-gradient shrink-0">
+                                        <div class="w-full h-full bg-bgCard rounded-full border-[3px] border-[#120A21] flex items-center justify-center overflow-hidden relative">
+                                            <img src="ai_gromov.jpg" alt="ai_gromov" class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                    <!-- Stats (Убраны просмотры) -->
+                                    <div class="flex-1 flex justify-around text-center px-1">
+                                        <div class="flex flex-col"><span class="font-bold text-sm">300</span><span class="text-[9px] text-gray-400">Публикаций</span></div>
+                                        <div class="flex flex-col"><span class="font-bold text-sm">3 000</span><span class="text-[9px] text-gray-400">Подписчиков</span></div>
+                                    </div>
+                                </div>
+                                <!-- Bio -->
+                                <div class="text-xs space-y-1">
+                                    <div class="font-bold text-[13px]">AI Маркетинговое Агентство</div>
+                                    <div class="text-gray-300 text-[11px]">Гарантия результата по договору 🚀</div>
+                                    <div class="text-blue-400 text-[11px]">t.me/ai_gromov8</div>
+                                </div>
+                                
+                                <!-- Панель Просмотров (Динамический счетчик) -->
+                                <div class="bg-white/5 border border-primary/30 rounded-lg px-3 py-2 mt-1 flex justify-between items-center shadow-sm relative overflow-hidden">
+                                    <div class="absolute inset-0 bg-primary/10"></div>
+                                    <span class="font-bold text-[13px] relative z-10 text-white">Просмотры</span>
+                                    <span id="dynamicViewsCounter" class="text-[16px] font-black text-transparent bg-clip-text bg-gradient-to-r from-[#F58529] to-[#DD2A7B] drop-shadow-[0_0_8px_rgba(221,42,123,0.6)] relative z-10 tracking-widest">200</span>
+                                </div>
+
+                                <!-- Buttons -->
+                                <div class="flex gap-2 mt-1">
+                                    <div class="flex-1 bg-white/10 rounded-lg py-1.5 text-center text-xs font-semibold">Подписаться</div>
+                                    <div class="flex-1 bg-white/10 rounded-lg py-1.5 text-center text-xs font-semibold">Написать</div>
+                                </div>
+                                <!-- Highlights -->
+                                <div class="flex gap-3 mt-1 px-1">
+                                    <div class="flex flex-col items-center gap-1">
+                                        <div class="w-10 h-10 rounded-full border border-white/20 bg-white/5"></div>
+                                    </div>
+                                    <div class="flex flex-col items-center gap-1">
+                                        <div class="w-10 h-10 rounded-full border border-white/20 bg-white/5"></div>
+                                    </div>
+                                </div>
+                                <!-- Grid Tabs -->
+                                <div class="flex justify-around border-t border-white/10 pt-2 mt-1">
+                                    <i data-lucide="grid" class="w-5 h-5 text-white"></i>
+                                    <i data-lucide="film" class="w-5 h-5 text-gray-500"></i>
+                                    <i data-lucide="bookmark" class="w-5 h-5 text-gray-500"></i>
+                                </div>
+                                <!-- Grid content -->
+                                <div class="grid grid-cols-3 gap-[2px] mt-1 -mx-4 h-full bg-[#090514]">
+                                    <div class="bg-white/10"></div>
+                                    <div class="bg-white/10"></div>
+                                    <div class="bg-white/10 relative">
+                                        <div class="absolute top-1 right-1"><i data-lucide="layers" class="w-3 h-3 text-white"></i></div>
+                                    </div>
+                                    <div class="bg-white/10"></div>
+                                    <div class="bg-white/10 relative flex items-center justify-center overflow-hidden">
+                                        <div class="absolute inset-0 bg-ig-ai-gradient opacity-20"></div>
+                                        <div class="bg-black/50 px-2 py-1 rounded text-[10px] font-bold flex items-center gap-1 z-10"><i data-lucide="play" class="w-2 h-2 fill-white"></i>3M</div>
+                                    </div>
+                                    <div class="bg-white/10"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок 2: Срыв шаблона -->
+        <section id="how-it-works" class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-black mb-6 uppercase tracking-tight">Почему 1-2 красивых ролика в неделю <span class="text-gradient">больше не приносят заявок?</span></h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <!-- Старый подход -->
+                    <div class="glass-card p-8 rounded-3xl border border-white/5 relative overflow-hidden group" data-aos="fade-right">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-red-500/5 rounded-full blur-[50px] group-hover:bg-red-500/10 transition-colors"></div>
+                        <div class="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-6 border border-white/10">
+                            <i data-lucide="x-circle" class="w-7 h-7 text-gray-500"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-4 uppercase tracking-wide">Старый подход</h3>
+                        <p class="text-gray-400 font-medium leading-relaxed">
+                            Вы тратите часы на написание сценария, выставление света и съемку, платите за аренду студии и монтаж. Ждете чуда от алгоритмов, а в итоге получаете <span class="text-white font-bold">200-400 просмотров</span>, 5 лайков от друзей и родных, минус в кошельке, выгорание и саботаж съемок рилс.
+                        </p>
+                    </div>
+
+                    <!-- Наша модель -->
+                    <div class="glass-card p-8 rounded-3xl border border-primary/20 relative overflow-hidden group" data-aos="fade-left">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-[50px] group-hover:bg-primary/20 transition-colors"></div>
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 border border-primary/20">
+                            <i data-lucide="rocket" class="w-7 h-7 text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-4 uppercase tracking-wide">Наша модель: <span class="text-primary">Массовая экспансия</span></h3>
+                        <p class="text-gray-300 font-medium leading-relaxed">
+                            Мы публикуем <span class="text-white font-bold">10 роликов в день</span>, делая ваш аккаунт для инстаграма максимально привлекательным за счет регулярности выхода контента. Алгоритмы начинают работать на вас и сами находят вашу аудиторию за счет объемов.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Акцент: Окно безопасности -->
+                <div class="relative rounded-3xl bg-ig-ai-gradient p-[1px]" data-aos="fade-up" data-aos-offset="100">
+                    <div class="bg-bgCard/95 backdrop-blur-xl rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center gap-8">
+                        <div class="flex-shrink-0 w-16 h-16 bg-ig-ai-gradient rounded-2xl flex items-center justify-center shadow-lg shadow-primary/20">
+                            <i data-lucide="shield-check" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2 flex items-center gap-2">
+                                Абсолютно безопасно для вашего бренда
+                            </h4>
+                            <p class="text-gray-400 font-medium">
+                                Мы используем <strong class="text-white">«Пробный режим»</strong> платформы. Ваш основной профиль не поменяется, лента останется чистой, а текущие подписчики не увидят этот объем контента. Ролики показываются <span class="text-highlight font-bold underline decoration-highlight/50 underline-offset-4">только новой аудитории!</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок 3: Кейсы -->
+        <section id="cases" class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-black mb-4 uppercase tracking-tight">Цифры говорят <span class="text-gradient">громче слов</span></h2>
+                    <p class="text-gray-400 font-medium">Реальные результаты наших партнеров за 30 дней работы.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Кейс 1 -->
+                    <div class="glass-card rounded-3xl p-6 border border-white/5 hover:border-primary/50 transition-colors duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="inline-block px-3 py-1 rounded-full bg-white/5 text-[10px] font-bold text-gray-300 mb-6 border border-white/10 group-hover:border-primary/30 transition-colors uppercase tracking-wider">
+                            Маркетинг, новый аккаунт
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex justify-between items-center pb-4 border-b border-white/10">
+                                <div>
+                                    <p class="text-xs text-gray-500 mb-1 font-bold uppercase tracking-wider">Было</p>
+                                    <p class="font-semibold text-gray-300">0 подп.</p>
+                                </div>
+                                <i data-lucide="arrow-right" class="w-5 h-5 text-primary opacity-80"></i>
+                                <div class="text-right">
+                                    <p class="text-xs text-gray-500 mb-1 font-bold uppercase tracking-wider">Стало <span class="text-[10px] lowercase text-gray-600">(30 дней)</span></p>
+                                    <p class="font-black text-white text-lg">5 864 подп.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-black/60 rounded-2xl p-4 flex items-center justify-between border border-white/5">
+                                <div>
+                                    <p class="text-[10px] text-gray-500 mb-1 font-bold uppercase tracking-wider">Цена подписчика</p>
+                                    <p class="text-xl font-black text-primary">8.52 рублей</p>
+                                </div>
+                                <svg class="w-16 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Кейс 2 -->
+                    <div class="glass-card rounded-3xl p-6 border border-white/5 hover:border-primary/50 transition-colors duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                        <div class="inline-block px-3 py-1 rounded-full bg-white/5 text-[10px] font-bold text-gray-300 mb-6 border border-white/10 group-hover:border-primary/30 transition-colors uppercase tracking-wider">
+                            Женская психология
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex justify-between items-center pb-4 border-b border-white/10">
+                                <div>
+                                    <p class="text-xs text-gray-500 mb-1 font-bold uppercase tracking-wider">Было</p>
+                                    <p class="font-semibold text-gray-300">2 204 подп.</p>
+                                </div>
+                                <i data-lucide="arrow-right" class="w-5 h-5 text-primary opacity-80"></i>
+                                <div class="text-right">
+                                    <p class="text-xs text-gray-500 mb-1 font-bold uppercase tracking-wider">Стало <span class="text-[10px] lowercase text-gray-600">(30 дней)</span></p>
+                                    <p class="font-black text-white text-lg">18 799 подп.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-black/60 rounded-2xl p-4 flex items-center justify-between border border-white/5">
+                                <div>
+                                    <p class="text-[10px] text-gray-500 mb-1 font-bold uppercase tracking-wider">Цена подписчика</p>
+                                    <p class="text-xl font-black text-primary">3,01 рубля</p>
+                                </div>
+                                <svg class="w-16 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Кейс 3 -->
+                    <div class="glass-card rounded-3xl p-6 border border-white/5 hover:border-primary/50 transition-colors duration-300 group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="inline-block px-3 py-1 rounded-full bg-white/5 text-[10px] font-bold text-gray-300 mb-6 border border-white/10 group-hover:border-primary/30 transition-colors uppercase tracking-wider">
+                            Федеральный спикер, тренер
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex justify-between items-center pb-4 border-b border-white/10">
+                                <div>
+                                    <p class="text-xs text-gray-500 mb-1 font-bold uppercase tracking-wider">Было</p>
+                                    <p class="font-semibold text-gray-300">181 тыс подп.</p>
+                                </div>
+                                <i data-lucide="arrow-right" class="w-5 h-5 text-primary opacity-80"></i>
+                                <div class="text-right">
+                                    <p class="text-xs text-gray-500 mb-1 font-bold uppercase tracking-wider">Стало <span class="text-[10px] lowercase text-gray-600">(80 дней)</span></p>
+                                    <p class="font-black text-white text-lg">193 тыс подп.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-black/60 rounded-2xl p-4 flex items-center justify-between border border-white/5">
+                                <div>
+                                    <p class="text-[10px] text-gray-500 mb-1 font-bold uppercase tracking-wider">Цена подписчика</p>
+                                    <p class="text-xl font-black text-primary">12.88 рублей</p>
+                                </div>
+                                <svg class="w-16 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center" data-aos="fade-up">
+                    <p class="text-xs md:text-sm text-gray-500 font-medium uppercase tracking-wider">
+                        * По запросу могут быть предоставлены скриншоты профессиональной панели инстаграм и еще больше кейсов
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок 3.5: Нам доверяют (Stories Carousel) -->
+        <section id="trusted" class="py-12 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+                <div class="text-center" data-aos="fade-up">
+                    <h2 class="text-2xl md:text-4xl font-black mb-2 uppercase tracking-tight">Нам <span class="text-gradient">доверяют</span></h2>
+                </div>
+            </div>
+            
+            <div class="marquee-wrapper w-full py-4" data-aos="fade-in" data-aos-delay="200">
+                <div class="marquee-container flex gap-6 md:gap-12 px-6">
+                    <!-- Первая группа элементов -->
+                    <a href="https://www.instagram.com/vysotsky5d/" target="_blank" class="flex flex-col items-center gap-2 w-20 md:w-28 shrink-0 cursor-pointer group">
+                        <div class="w-20 h-20 md:w-28 md:h-28 rounded-full p-[3px] bg-ig-ai-gradient shrink-0 transition-transform duration-300 group-hover:scale-105 shadow-[0_0_20px_rgba(221,42,123,0.15)] group-hover:shadow-[0_0_30px_rgba(221,42,123,0.4)]">
+                            <div class="w-full h-full bg-[#090514] rounded-full border-[3px] md:border-[4px] border-[#090514] flex items-center justify-center overflow-hidden">
+                                <img src="vysotsky5d.jpg" alt="vysotsky5d" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-full">
+                            <span class="font-bold text-[10px] md:text-sm text-gray-400 transition-colors group-hover:text-white truncate w-full text-center">@vysotsky5d</span>
+                            <span class="text-[9px] text-gray-500 font-semibold tracking-wider">15,3 тыс</span>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.instagram.com/iavaal/" target="_blank" class="flex flex-col items-center gap-2 w-20 md:w-28 shrink-0 cursor-pointer group">
+                        <div class="w-20 h-20 md:w-28 md:h-28 rounded-full p-[3px] bg-ig-ai-gradient shrink-0 transition-transform duration-300 group-hover:scale-105 shadow-[0_0_20px_rgba(221,42,123,0.15)] group-hover:shadow-[0_0_30px_rgba(221,42,123,0.4)]">
+                            <div class="w-full h-full bg-[#090514] rounded-full border-[3px] md:border-[4px] border-[#090514] flex items-center justify-center overflow-hidden">
+                                <img src="iavaal.jpg" alt="iavaal" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-full">
+                            <span class="font-bold text-[10px] md:text-sm text-gray-400 transition-colors group-hover:text-white truncate w-full text-center">@iavaal</span>
+                            <span class="text-[9px] text-gray-500 font-semibold tracking-wider">27,9 тыс</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/dmitrykhara/" target="_blank" class="flex flex-col items-center gap-2 w-20 md:w-28 shrink-0 cursor-pointer group">
+                        <div class="w-20 h-20 md:w-28 md:h-28 rounded-full p-[3px] bg-ig-ai-gradient shrink-0 transition-transform duration-300 group-hover:scale-105 shadow-[0_0_20px_rgba(221,42,123,0.15)] group-hover:shadow-[0_0_30px_rgba(221,42,123,0.4)]">
+                            <div class="w-full h-full bg-[#090514] rounded-full border-[3px] md:border-[4px] border-[#090514] flex items-center justify-center overflow-hidden">
+                                <img src="dmitrykhara.jpg" alt="dmitrykhara" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-full">
+                            <span class="font-bold text-[10px] md:text-sm text-gray-400 transition-colors group-hover:text-white truncate w-full text-center">@dmitrykhara</span>
+                            <span class="text-[9px] text-gray-500 font-semibold tracking-wider">192 тыс</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/sv.chel/" target="_blank" class="flex flex-col items-center gap-2 w-20 md:w-28 shrink-0 cursor-pointer group">
+                        <div class="w-20 h-20 md:w-28 md:h-28 rounded-full p-[3px] bg-ig-ai-gradient shrink-0 transition-transform duration-300 group-hover:scale-105 shadow-[0_0_20px_rgba(221,42,123,0.15)] group-hover:shadow-[0_0_30px_rgba(221,42,123,0.4)]">
+                            <div class="w-full h-full bg-[#090514] rounded-full border-[3px] md:border-[4px] border-[#090514] flex items-center justify-center overflow-hidden">
+                                <img src="svchel.jpg" alt="sv.chel" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-full">
+                            <span class="font-bold text-[10px] md:text-sm text-gray-400 transition-colors group-hover:text-white truncate w-full text-center">@sv.chel</span>
+                            <span class="text-[9px] text-gray-500 font-semibold tracking-wider">31,6 тыс</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/luckyanni777/" target="_blank" class="flex flex-col items-center gap-2 w-20 md:w-28 shrink-0 cursor-pointer group">
+                        <div class="w-20 h-20 md:w-28 md:h-28 rounded-full p-[3px] bg-ig-ai-gradient shrink-0 transition-transform duration-300 group-hover:scale-105 shadow-[0_0_20px_rgba(221,42,123,0.15)] group-hover:shadow-[0_0_30px_rgba(221,42,123,0.4)]">
+                            <div class="w-full h-full bg-[#090514] rounded-full border-[3px] md:border-[4px] border-[#090514] flex items-center justify-center overflow-hidden">
+                                <img src="luckyanni777.jpg" alt="luckyanni777" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-full">
+                            <span class="font-bold text-[10px] md:text-sm text-gray-400 transition-colors group-hover:text-white truncate w-full text-center">@luckyanni777</span>
+                            <span class="text-[9px] text-gray-500 font-semibold tracking-wider">36,2 тыс</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/code_vsego/" target="_blank" class="flex flex-col items-center gap-2 w-20 md:w-28 shrink-0 cursor-pointer group">
+                        <div class="w-20 h-20 md:w-28 md:h-28 rounded-full p-[3px] bg-ig-ai-gradient shrink-0 transition-transform duration-300 group-hover:scale-105 shadow-[0_0_20px_rgba(221,42,123,0.15)] group-hover:shadow-[0_0_30px_rgba(221,42,123,0.4)]">
+                            <div class="w-full h-full bg-[#090514] rounded-full border-[3px] md:border-[4px] border-[#090514] flex items-center justify-center overflow-hidden">
+                                <img src="familyinvest_life.jpg" alt="code_vsego" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-full">
+                            <span class="font-bold text-[10px] md:text-sm text-gray-400 transition-colors group-hover:text-white truncate w-full text-center">@code_vsego</span>
+                            <span class="text-[9px] text-gray-500 font-semibold tracking-wider">16,4 тыс</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/zhizniritmi/" target="_blank" class="flex flex-col items-center gap-2 w-20 md:w-28 shrink-0 cursor-pointer group">
+                        <div class="w-20 h-20 md:w-28 md:h-28 rounded-full p-[3px] bg-ig-ai-gradient shrink-0 transition-transform duration-300 group-hover:scale-105 shadow-[0_0_20px_rgba(221,42,123,0.15)] group-hover:shadow-[0_0_30px_rgba(221,42,123,0.4)]">
+                            <div class="w-full h-full bg-[#090514] rounded-full border-[3px] md:border-[4px] border-[#090514] flex items-center justify-center overflow-hidden">
+                                <img src="zhizniritmi.jpg" alt="zhizniritmi" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-full">
+                            <span class="font-bold text-[10px] md:text-sm text-gray-400 transition-colors group-hover:text-white truncate w-full text-center">@zhizniritmi</span>
+                            <span class="text-[9px] text-gray-500 font-semibold tracking-wider">6 тыс</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/cosmetolog_himki/" target="_blank" class="flex flex-col items-center gap-2 w-20 md:w-28 shrink-0 cursor-pointer group">
+                        <div class="w-20 h-20 md:w-28 md:h-28 rounded-full p-[3px] bg-ig-ai-gradient shrink-0 transition-transform duration-300 group-hover:scale-105 shadow-[0_0_20px_rgba(221,42,123,0.15)] group-hover:shadow-[0_0_30px_rgba(221,42,123,0.4)]">
+                            <div class="w-full h-full bg-[#090514] rounded-full border-[3px] md:border-[4px] border-[#090514] flex items-center justify-center overflow-hidden">
+                                <img src="cosmetolog_himki.jpg" alt="cosmetolog_himki" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-full">
+                            <span class="font-bold text-[10px] md:text-sm text-gray-400 transition-colors group-hover:text-white truncate w-full text-center">@cosmetolog_himki</span>
+                            <span class="text-[9px] text-gray-500 font-semibold tracking-wider">8,5 тыс</span>
+                        </div>
+                    </a>
+
+                    <!-- Вторая группа (Клон для бесшовной анимации) -->
+                    <a href="https://www.instagram.com/vysotsky5d/" target="_blank" class="flex flex-col items-center gap-2 w-20 md:w-28 shrink-0 cursor-pointer group">
+                        <div class="w-20 h-20 md:w-28 md:h-28 rounded-full p-[3px] bg-ig-ai-gradient shrink-0 transition-transform duration-300 group-hover:scale-105 shadow-[0_0_20px_rgba(221,42,123,0.15)] group-hover:shadow-[0_0_30px_rgba(221,42,123,0.4)]">
+                            <div class="w-full h-full bg-[#090514] rounded-full border-[3px] md:border-[4px] border-[#090514] flex items-center justify-center overflow-hidden">
+                                <img src="vysotsky5d.jpg" alt="vysotsky5d" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-full">
+                            <span class="font-bold text-[10px] md:text-sm text-gray-400 transition-colors group-hover:text-white truncate w-full text-center">@vysotsky5d</span>
+                            <span class="text-[9px] text-gray-500 font-semibold tracking-wider">15,3 тыс</span>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.instagram.com/iavaal/" target="_blank" class="flex flex-col items-center gap-2 w-20 md:w-28 shrink-0 cursor-pointer group">
+                        <div class="w-20 h-20 md:w-28 md:h-28 rounded-full p-[3px] bg-ig-ai-gradient shrink-0 transition-transform duration-300 group-hover:scale-105 shadow-[0_0_20px_rgba(221,42,123,0.15)] group-hover:shadow-[0_0_30px_rgba(221,42,123,0.4)]">
+                            <div class="w-full h-full bg-[#090514] rounded-full border-[3px] md:border-[4px] border-[#090514] flex items-center justify-center overflow-hidden">
+                                <img src="iavaal.jpg" alt="iavaal" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-full">
+                            <span class="font-bold text-[10px] md:text-sm text-gray-400 transition-colors group-hover:text-white truncate w-full text-center">@iavaal</span>
+                            <span class="text-[9px] text-gray-500 font-semibold tracking-wider">27,9 тыс</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/dmitrykhara/" target="_blank" class="flex flex-col items-center gap-2 w-20 md:w-28 shrink-0 cursor-pointer group">
+                        <div class="w-20 h-20 md:w-28 md:h-28 rounded-full p-[3px] bg-ig-ai-gradient shrink-0 transition-transform duration-300 group-hover:scale-105 shadow-[0_0_20px_rgba(221,42,123,0.15)] group-hover:shadow-[0_0_30px_rgba(221,42,123,0.4)]">
+                            <div class="w-full h-full bg-[#090514] rounded-full border-[3px] md:border-[4px] border-[#090514] flex items-center justify-center overflow-hidden">
+                                <img src="dmitrykhara.jpg" alt="dmitrykhara" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-full">
+                            <span class="font-bold text-[10px] md:text-sm text-gray-400 transition-colors group-hover:text-white truncate w-full text-center">@dmitrykhara</span>
+                            <span class="text-[9px] text-gray-500 font-semibold tracking-wider">192 тыс</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/sv.chel/" target="_blank" class="flex flex-col items-center gap-2 w-20 md:w-28 shrink-0 cursor-pointer group">
+                        <div class="w-20 h-20 md:w-28 md:h-28 rounded-full p-[3px] bg-ig-ai-gradient shrink-0 transition-transform duration-300 group-hover:scale-105 shadow-[0_0_20px_rgba(221,42,123,0.15)] group-hover:shadow-[0_0_30px_rgba(221,42,123,0.4)]">
+                            <div class="w-full h-full bg-[#090514] rounded-full border-[3px] md:border-[4px] border-[#090514] flex items-center justify-center overflow-hidden">
+                                <img src="svchel.jpg" alt="sv.chel" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-full">
+                            <span class="font-bold text-[10px] md:text-sm text-gray-400 transition-colors group-hover:text-white truncate w-full text-center">@sv.chel</span>
+                            <span class="text-[9px] text-gray-500 font-semibold tracking-wider">31,6 тыс</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/luckyanni777/" target="_blank" class="flex flex-col items-center gap-2 w-20 md:w-28 shrink-0 cursor-pointer group">
+                        <div class="w-20 h-20 md:w-28 md:h-28 rounded-full p-[3px] bg-ig-ai-gradient shrink-0 transition-transform duration-300 group-hover:scale-105 shadow-[0_0_20px_rgba(221,42,123,0.15)] group-hover:shadow-[0_0_30px_rgba(221,42,123,0.4)]">
+                            <div class="w-full h-full bg-[#090514] rounded-full border-[3px] md:border-[4px] border-[#090514] flex items-center justify-center overflow-hidden">
+                                <img src="luckyanni777.jpg" alt="luckyanni777" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-full">
+                            <span class="font-bold text-[10px] md:text-sm text-gray-400 transition-colors group-hover:text-white truncate w-full text-center">@luckyanni777</span>
+                            <span class="text-[9px] text-gray-500 font-semibold tracking-wider">36,2 тыс</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/code_vsego/" target="_blank" class="flex flex-col items-center gap-2 w-20 md:w-28 shrink-0 cursor-pointer group">
+                        <div class="w-20 h-20 md:w-28 md:h-28 rounded-full p-[3px] bg-ig-ai-gradient shrink-0 transition-transform duration-300 group-hover:scale-105 shadow-[0_0_20px_rgba(221,42,123,0.15)] group-hover:shadow-[0_0_30px_rgba(221,42,123,0.4)]">
+                            <div class="w-full h-full bg-[#090514] rounded-full border-[3px] md:border-[4px] border-[#090514] flex items-center justify-center overflow-hidden">
+                                <img src="familyinvest_life.jpg" alt="code_vsego" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-full">
+                            <span class="font-bold text-[10px] md:text-sm text-gray-400 transition-colors group-hover:text-white truncate w-full text-center">@code_vsego</span>
+                            <span class="text-[9px] text-gray-500 font-semibold tracking-wider">16,4 тыс</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/zhizniritmi/" target="_blank" class="flex flex-col items-center gap-2 w-20 md:w-28 shrink-0 cursor-pointer group">
+                        <div class="w-20 h-20 md:w-28 md:h-28 rounded-full p-[3px] bg-ig-ai-gradient shrink-0 transition-transform duration-300 group-hover:scale-105 shadow-[0_0_20px_rgba(221,42,123,0.15)] group-hover:shadow-[0_0_30px_rgba(221,42,123,0.4)]">
+                            <div class="w-full h-full bg-[#090514] rounded-full border-[3px] md:border-[4px] border-[#090514] flex items-center justify-center overflow-hidden">
+                                <img src="zhizniritmi.jpg" alt="zhizniritmi" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-full">
+                            <span class="font-bold text-[10px] md:text-sm text-gray-400 transition-colors group-hover:text-white truncate w-full text-center">@zhizniritmi</span>
+                            <span class="text-[9px] text-gray-500 font-semibold tracking-wider">6 тыс</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/cosmetolog_himki/" target="_blank" class="flex flex-col items-center gap-2 w-20 md:w-28 shrink-0 cursor-pointer group">
+                        <div class="w-20 h-20 md:w-28 md:h-28 rounded-full p-[3px] bg-ig-ai-gradient shrink-0 transition-transform duration-300 group-hover:scale-105 shadow-[0_0_20px_rgba(221,42,123,0.15)] group-hover:shadow-[0_0_30px_rgba(221,42,123,0.4)]">
+                            <div class="w-full h-full bg-[#090514] rounded-full border-[3px] md:border-[4px] border-[#090514] flex items-center justify-center overflow-hidden">
+                                <img src="cosmetolog_himki.jpg" alt="cosmetolog_himki" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-full">
+                            <span class="font-bold text-[10px] md:text-sm text-gray-400 transition-colors group-hover:text-white truncate w-full text-center">@cosmetolog_himki</span>
+                            <span class="text-[9px] text-gray-500 font-semibold tracking-wider">8,5 тыс</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок 4: Тарифы -->
+        <section id="tariffs" class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-black mb-4 uppercase tracking-tight">Выберите формат <span class="text-gradient">работы</span></h2>
+                </div>
+
+                <div class="grid lg:grid-cols-3 gap-6 lg:gap-4 items-start">
+                    <!-- Тариф 1: ТРАФИК -->
+                    <div class="glass-card rounded-3xl p-6 border border-white/5 flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-xl font-black text-gray-300 mb-2 uppercase tracking-wide">Тариф 1: «ТРАФИК»</h3>
+                        <div class="mb-2">
+                            <span class="text-3xl font-black text-white">50 000 ₽</span>
+                            <span class="text-gray-500 text-xs font-semibold">/ мес</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400 font-medium mb-6 min-h-[32px] leading-relaxed">
+                            Раскачать блог, пробить алгоритмы и набрать аудиторию
+                        </p>
+                        
+                        <div class="flex-1 space-y-5 font-medium text-[13px]">
+                            <!-- ОПТИМИЗАЦИЯ ПРОФИЛЯ -->
+                            <div>
+                                <div class="text-[9px] font-bold text-gray-500 uppercase tracking-widest mb-3">Оптимизация профиля</div>
+                                <ul class="space-y-2.5">
+                                    <li class="flex items-start gap-2 text-gray-300">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight">Аудит и переупаковка шапки (bio)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-600">
+                                        <i data-lucide="x" class="w-4 h-4 text-red-500/50 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight line-through decoration-gray-700">Архитектура Актуального и Сетки</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-600">
+                                        <i data-lucide="x" class="w-4 h-4 text-red-500/50 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight line-through decoration-gray-700">Настройка шапки в ТГ</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-600">
+                                        <i data-lucide="x" class="w-4 h-4 text-red-500/50 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight line-through decoration-gray-700">Аудит конкурентов (аналитика)</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- ГЕНЕРАЦИЯ ТРАФИКА -->
+                            <div>
+                                <div class="text-[9px] font-bold text-gray-500 uppercase tracking-widest mb-3">Генерация трафика (Reels)</div>
+                                <ul class="space-y-2.5">
+                                    <li class="flex items-start gap-2 text-gray-300">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight">Инструкция по съемке исходников</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-300">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight">Монтаж и выкладка Reels - 10/день 6 дней в неделю ~ 250/мес</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-600">
+                                        <i data-lucide="x" class="w-4 h-4 text-red-500/50 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight line-through decoration-gray-700">Производство каруселей (25/мес)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-600">
+                                        <i data-lucide="x" class="w-4 h-4 text-red-500/50 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight line-through decoration-gray-700">Производство Reels ИИ Аватар (25/мес)</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- МОНЕТИЗАЦИЯ -->
+                            <div>
+                                <div class="text-[9px] font-bold text-gray-500 uppercase tracking-widest mb-3">Монетизация и лидогенерация</div>
+                                <ul class="space-y-2.5">
+                                    <li class="flex items-start gap-2 text-gray-600">
+                                        <i data-lucide="x" class="w-4 h-4 text-red-500/50 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight line-through decoration-gray-700">Контентная воронка (20 единиц контента)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-600">
+                                        <i data-lucide="x" class="w-4 h-4 text-red-500/50 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight line-through decoration-gray-700">Механика «Лид в Директ»</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-600">
+                                        <i data-lucide="x" class="w-4 h-4 text-red-500/50 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight line-through decoration-gray-700">Нейрофотосессия (пак студийных фото)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-600">
+                                        <i data-lucide="x" class="w-4 h-4 text-red-500/50 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight line-through decoration-gray-700">Генеративный контент (ИИ видео-аватар)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-600">
+                                        <i data-lucide="x" class="w-4 h-4 text-red-500/50 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight line-through decoration-gray-700">Чат-боты (Инста / ТГ)</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- ГАРАНТИИ -->
+                            <div>
+                                <div class="text-[9px] font-bold text-gray-500 uppercase tracking-widest mb-3">Гарантии и сервис</div>
+                                <ul class="space-y-2.5">
+                                    <li class="flex items-start gap-2 text-gray-300">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight">Менеджер и регулярная отчетность</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-white bg-white/5 p-2 rounded-lg border border-white/10">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight text-[11px] font-bold">+3000 подписчиков и 3 млн просмотров</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#cta-section" class="mt-6 block w-full py-4 px-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-center font-bold uppercase tracking-widest text-sm transition-colors">Выбрать</a>
+                    </div>
+
+                    <!-- Тариф 2: КОНТЕНТ-ВОРОНКА (ХИТ) -->
+                    <div class="relative rounded-3xl bg-ig-ai-gradient p-[2px] transform lg:-translate-y-4 shadow-[0_0_40px_rgba(221,42,123,0.35)] z-10 flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-ig-ai-gradient text-white text-[10px] font-black uppercase tracking-widest py-1 px-4 rounded-full shadow-lg whitespace-nowrap">
+                            Хит продаж
+                        </div>
+                        <div class="bg-bgDark rounded-[22px] p-6 flex flex-col h-full">
+                            <h3 class="text-xl font-black text-white mb-2 uppercase tracking-wide">Тариф 2: «КОНТЕНТ-ВОРОНКА»</h3>
+                            <div class="mb-2">
+                                <span class="text-3xl font-black text-white">80 000 ₽</span>
+                                <span class="text-gray-500 text-xs font-semibold">/ мес</span>
+                            </div>
+                            <p class="text-[11px] text-gray-300 font-medium mb-6 min-h-[32px] leading-relaxed">
+                                Превратить новую аудиторию в теплых лидов и клиентов
+                            </p>
+                            
+                            <div class="flex-1 space-y-5 font-medium text-[13px]">
+                                <!-- ОПТИМИЗАЦИЯ ПРОФИЛЯ -->
+                                <div>
+                                    <div class="text-[9px] font-bold text-primary uppercase tracking-widest mb-3">Оптимизация профиля</div>
+                                    <ul class="space-y-2.5">
+                                        <li class="flex items-start gap-2 text-gray-300">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                            <span class="leading-tight">Аудит и переупаковка шапки (bio)</span>
+                                        </li>
+                                        <li class="flex items-start gap-2 text-gray-300">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                            <span class="leading-tight">Архитектура Актуального и Сетки</span>
+                                        </li>
+                                        <li class="flex items-start gap-2 text-gray-600">
+                                            <i data-lucide="x" class="w-4 h-4 text-red-500/50 shrink-0 mt-0.5"></i>
+                                            <span class="leading-tight line-through decoration-gray-700">Настройка шапки в ТГ</span>
+                                        </li>
+                                        <li class="flex items-start gap-2 text-gray-600">
+                                            <i data-lucide="x" class="w-4 h-4 text-red-500/50 shrink-0 mt-0.5"></i>
+                                            <span class="leading-tight line-through decoration-gray-700">Аудит конкурентов (аналитика)</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- ГЕНЕРАЦИЯ ТРАФИКА -->
+                                <div>
+                                    <div class="text-[9px] font-bold text-primary uppercase tracking-widest mb-3">Генерация трафика (Reels)</div>
+                                    <ul class="space-y-2.5">
+                                        <li class="flex items-start gap-2 text-gray-300">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                            <span class="leading-tight">Инструкция по съемке исходников</span>
+                                        </li>
+                                        <li class="flex items-start gap-2 text-gray-300">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                            <span class="leading-tight">Монтаж и выкладка Reels - 10/день 6 дней в неделю ~ 250/мес</span>
+                                        </li>
+                                        <li class="flex items-start gap-2 text-gray-600">
+                                            <i data-lucide="x" class="w-4 h-4 text-red-500/50 shrink-0 mt-0.5"></i>
+                                            <span class="leading-tight line-through decoration-gray-700">Производство каруселей (25/мес)</span>
+                                        </li>
+                                        <li class="flex items-start gap-2 text-gray-600">
+                                            <i data-lucide="x" class="w-4 h-4 text-red-500/50 shrink-0 mt-0.5"></i>
+                                            <span class="leading-tight line-through decoration-gray-700">Производство Reels ИИ Аватар (25/мес)</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- МОНЕТИЗАЦИЯ -->
+                                <div>
+                                    <div class="text-[9px] font-bold text-primary uppercase tracking-widest mb-3">Монетизация и лидогенерация</div>
+                                    <ul class="space-y-2.5">
+                                        <li class="flex items-start gap-2 text-gray-300">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                            <span class="leading-tight">Контентная воронка (20 единиц контента)</span>
+                                        </li>
+                                        <li class="flex items-start gap-2 text-gray-300">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                            <span class="leading-tight">Механика «Лид в Директ»</span>
+                                        </li>
+                                        <li class="flex items-start gap-2 text-gray-600">
+                                            <i data-lucide="x" class="w-4 h-4 text-red-500/50 shrink-0 mt-0.5"></i>
+                                            <span class="leading-tight line-through decoration-gray-700">Нейрофотосессия (пак студийных фото)</span>
+                                        </li>
+                                        <li class="flex items-start gap-2 text-gray-600">
+                                            <i data-lucide="x" class="w-4 h-4 text-red-500/50 shrink-0 mt-0.5"></i>
+                                            <span class="leading-tight line-through decoration-gray-700">Генеративный контент (ИИ видео-аватар)</span>
+                                        </li>
+                                        <li class="flex items-start gap-2 text-gray-600">
+                                            <i data-lucide="x" class="w-4 h-4 text-red-500/50 shrink-0 mt-0.5"></i>
+                                            <span class="leading-tight line-through decoration-gray-700">Чат-боты (Инста / ТГ)</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- ГАРАНТИИ -->
+                                <div>
+                                    <div class="text-[9px] font-bold text-primary uppercase tracking-widest mb-3">Гарантии и сервис</div>
+                                    <ul class="space-y-2.5">
+                                        <li class="flex items-start gap-2 text-gray-300">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                            <span class="leading-tight">Менеджер и регулярная отчетность</span>
+                                        </li>
+                                        <li class="flex items-start gap-2 text-white bg-primary/10 p-2 rounded-lg border border-primary/30">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                            <span class="leading-tight text-[11px] font-bold">+3500 подписчиков и 4 млн просмотров</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="#cta-section" class="mt-6 block w-full py-4 px-4 bg-ig-ai-gradient hover:opacity-90 rounded-xl text-center font-bold uppercase tracking-widest text-sm text-white shadow-lg shadow-primary/20 transition-all">Выбрать</a>
+                        </div>
+                    </div>
+
+                    <!-- Тариф 3: ВИП -->
+                    <div class="glass-card rounded-3xl p-6 border border-white/5 flex flex-col h-full" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="text-xl font-black text-accent mb-2 uppercase tracking-wide">Тариф 3: "ВИП / Под Ключ"</h3>
+                        <div class="mb-2">
+                            <span class="text-3xl font-black text-white">150 000 ₽</span>
+                            <span class="text-gray-500 text-xs font-semibold">/ мес</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400 font-medium mb-6 min-h-[32px] leading-relaxed">
+                            Вырастить блог и настроить автоматизации для создания лидов с помощью ИИ
+                        </p>
+                        
+                        <div class="flex-1 space-y-5 font-medium text-[13px]">
+                            <!-- ОПТИМИЗАЦИЯ ПРОФИЛЯ -->
+                            <div>
+                                <div class="text-[9px] font-bold text-gray-500 uppercase tracking-widest mb-3">Оптимизация профиля</div>
+                                <ul class="space-y-2.5">
+                                    <li class="flex items-start gap-2 text-gray-300">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight">Аудит и переупаковка шапки (bio)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-300">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight">Архитектура Актуального и Сетки</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-300">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight">Настройка шапки в ТГ</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-300">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight">Аудит конкурентов (аналитика)</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- ГЕНЕРАЦИЯ ТРАФИКА -->
+                            <div>
+                                <div class="text-[9px] font-bold text-gray-500 uppercase tracking-widest mb-3">Генерация трафика (Reels)</div>
+                                <ul class="space-y-2.5">
+                                    <li class="flex items-start gap-2 text-gray-300">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight">Инструкция по съемке исходников</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-300">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight">Монтаж и выкладка Reels - 10/день 6 дней в неделю ~ 250/мес</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-300">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight">Производство каруселей (25/мес)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-300">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight">Производство Reels ИИ Аватар (25/мес)</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- МОНЕТИЗАЦИЯ -->
+                            <div>
+                                <div class="text-[9px] font-bold text-gray-500 uppercase tracking-widest mb-3">Монетизация и лидогенерация</div>
+                                <ul class="space-y-2.5">
+                                    <li class="flex items-start gap-2 text-gray-300">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight">Контентная воронка (20 единиц контента)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-300">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight">Механика «Лид в Директ»</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-300">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight">Нейрофотосессия (пак студийных фото)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-300">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight">Генеративный контент (ИИ видео-аватар)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-300">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight">Чат-боты (Инста / ТГ)</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- ГАРАНТИИ -->
+                            <div>
+                                <div class="text-[9px] font-bold text-gray-500 uppercase tracking-widest mb-3">Гарантии и сервис</div>
+                                <ul class="space-y-2.5">
+                                    <li class="flex items-start gap-2 text-gray-300">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight">Менеджер и регулярная отчетность</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-white bg-accent/10 p-2 rounded-lg border border-accent/30">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-400 shrink-0 mt-0.5"></i>
+                                        <span class="leading-tight text-[11px] font-bold">+4000 подписчиков и 5 млн просмотров</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#cta-section" class="mt-6 block w-full py-4 px-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-center font-bold uppercase tracking-widest text-sm transition-colors">Выбрать</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок 6: Дополнительные услуги (Спойлер с интерактивными чекбоксами) -->
+        <section class="py-10 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+            
+            <!-- Кнопка раскрытия -->
+            <button onclick="toggleServices()" class="w-full flex items-center justify-between p-6 rounded-2xl glass-card border border-white/10 hover:border-primary/40 transition-all group cursor-pointer">
+                <span class="text-lg md:text-xl font-bold text-white transition-colors group-hover:text-primary uppercase tracking-wide">Смотреть дополнительные услуги: Инфраструктура под ключ</span>
+                <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <i data-lucide="plus" id="toggleIcon" class="w-6 h-6 text-white transition-transform duration-300"></i>
+                </div>
+            </button>
+
+            <!-- Сворачиваемый контент -->
+            <div id="extraServices" class="spoiler-content">
+                <div class="spoiler-inner">
+                    <div class="pt-10 pb-4">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl font-black mb-4 uppercase tracking-tight">Полный запуск и автоматизация <span class="text-gradient">вашего бизнеса</span></h2>
+                            <p class="text-gray-400 font-medium max-w-2xl mx-auto mb-6">Мы не просто приводим трафик — мы строим фундамент для ваших продаж. Выбирайте необходимые модули кликом, и мы внедрим их с помощью передовых технологий.</p>
+                            
+                            <!-- Уточнение для VIP -->
+                            <div class="inline-flex items-start sm:items-center text-left sm:text-center gap-3 px-5 py-3 rounded-xl bg-accent/10 border border-accent/30 text-white text-[11px] md:text-xs font-bold uppercase tracking-wider max-w-3xl mx-auto shadow-[0_0_15px_rgba(129,52,175,0.15)]">
+                                <i data-lucide="info" class="w-5 h-5 text-accent shrink-0"></i>
+                                <span>Примечание: Для клиентов тарифа "ВИП / ПОД КЛЮЧ" базовая инфраструктура из этого списка уже включена в стоимость</span>
+                            </div>
+                        </div>
+
+                        <div class="grid lg:grid-cols-3 gap-8">
+                            
+                            <!-- Группа 1 -->
+                            <div class="space-y-6">
+                                <div class="flex items-center gap-3 mb-6">
+                                    <div class="w-8 h-8 rounded-lg bg-accent/20 flex items-center justify-center border border-accent/30">
+                                        <i data-lucide="brain" class="w-4 h-4 text-accent"></i>
+                                    </div>
+                                    <h3 class="text-xl font-black text-white uppercase tracking-wide">Стратегия и Смыслы</h3>
+                                </div>
+                                
+                                <div class="service-card glass p-6 rounded-2xl border border-white/5 relative group" onclick="toggleService(this)">
+                                    <div class="absolute top-4 right-4 w-5 h-5 rounded border border-white/20 flex items-center justify-center transition-colors check-icon-container">
+                                        <i data-lucide="check" class="w-3 h-3 check-icon"></i>
+                                    </div>
+                                    <h4 class="font-bold text-white mb-2 pr-6 service-title">1. ИИ-Распаковка</h4>
+                                    <p class="text-sm text-gray-400 font-medium">Вытащим ваши ключевые смыслы и создадим детальный профиль эксперта.</p>
+                                </div>
+                                <div class="service-card glass p-6 rounded-2xl border border-white/5 relative group" onclick="toggleService(this)">
+                                    <div class="absolute top-4 right-4 w-5 h-5 rounded border border-white/20 flex items-center justify-center transition-colors check-icon-container">
+                                        <i data-lucide="check" class="w-3 h-3 check-icon"></i>
+                                    </div>
+                                    <h4 class="font-bold text-white mb-2 pr-6 service-title">2. Глубокий анализ ЦА</h4>
+                                    <p class="text-sm text-gray-400 font-medium">Разберем боли, страхи и истинные потребности ваших клиентов.</p>
+                                </div>
+                                <div class="service-card glass p-6 rounded-2xl border border-white/5 relative group" onclick="toggleService(this)">
+                                    <div class="absolute top-4 right-4 w-5 h-5 rounded border border-white/20 flex items-center justify-center transition-colors check-icon-container">
+                                        <i data-lucide="check" class="w-3 h-3 check-icon"></i>
+                                    </div>
+                                    <h4 class="font-bold text-white mb-2 pr-6 service-title">3. Архитектура матрицы</h4>
+                                    <p class="text-sm text-gray-400 font-medium">Разработаем логичную линейку продуктов и пропишем ценовую политику.</p>
+                                </div>
+                            </div>
+
+                            <!-- Группа 2 -->
+                            <div class="space-y-6">
+                                <div class="flex items-center gap-3 mb-6">
+                                    <div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center border border-primary/30">
+                                        <i data-lucide="package" class="w-4 h-4 text-primary"></i>
+                                    </div>
+                                    <h3 class="text-xl font-black text-white uppercase tracking-wide">Упаковка и Контент</h3>
+                                </div>
+                                
+                                <div class="service-card glass p-6 rounded-2xl border border-white/5 relative group" onclick="toggleService(this)">
+                                    <div class="absolute top-4 right-4 w-5 h-5 rounded border border-white/20 flex items-center justify-center transition-colors check-icon-container">
+                                        <i data-lucide="check" class="w-3 h-3 check-icon"></i>
+                                    </div>
+                                    <h4 class="font-bold text-white mb-2 pr-6 service-title">4. Лид-магниты и трипвайеры</h4>
+                                    <p class="text-sm text-gray-400 font-medium">Создадим безотказные гайды для сбора контактов и стартовые продукты.</p>
+                                </div>
+                                <div class="service-card glass p-6 rounded-2xl border border-white/5 relative group" onclick="toggleService(this)">
+                                    <div class="absolute top-4 right-4 w-5 h-5 rounded border border-white/20 flex items-center justify-center transition-colors check-icon-container">
+                                        <i data-lucide="check" class="w-3 h-3 check-icon"></i>
+                                    </div>
+                                    <h4 class="font-bold text-white mb-2 pr-6 service-title">5. Цифровой ИИ-Аватар</h4>
+                                    <p class="text-sm text-gray-400 font-medium">Создадим вашу нейро-копию, которая озвучит любые тексты вашим голосом.</p>
+                                </div>
+                                <div class="service-card glass p-6 rounded-2xl border border-white/5 relative group" onclick="toggleService(this)">
+                                    <div class="absolute top-4 right-4 w-5 h-5 rounded border border-white/20 flex items-center justify-center transition-colors check-icon-container">
+                                        <i data-lucide="check" class="w-3 h-3 check-icon"></i>
+                                    </div>
+                                    <h4 class="font-bold text-white mb-2 pr-6 service-title">6. Нейрофотосессия</h4>
+                                    <p class="text-sm text-gray-400 font-medium">Сгенерируем студий фото в премиальных локациях из пары селфи.</p>
+                                </div>
+                                <div class="service-card glass p-6 rounded-2xl border border-white/5 relative group" onclick="toggleService(this)">
+                                    <div class="absolute top-4 right-4 w-5 h-5 rounded border border-white/20 flex items-center justify-center transition-colors check-icon-container">
+                                        <i data-lucide="check" class="w-3 h-3 check-icon"></i>
+                                    </div>
+                                    <h4 class="font-bold text-white mb-2 pr-6 service-title">7. Высококонверсионные лендинги</h4>
+                                    <p class="text-sm text-gray-400 font-medium">Соберем стильный продающий сайт под ваш проект.</p>
+                                </div>
+                            </div>
+
+                            <!-- Группа 3 -->
+                            <div class="space-y-6">
+                                <div class="flex items-center gap-3 mb-6">
+                                    <div class="w-8 h-8 rounded-lg bg-highlight/20 flex items-center justify-center border border-highlight/30">
+                                        <i data-lucide="cpu" class="w-4 h-4 text-highlight"></i>
+                                    </div>
+                                    <h3 class="text-xl font-black text-white uppercase tracking-wide">Технологии и Деньги</h3>
+                                </div>
+                                
+                                <div class="service-card glass p-6 rounded-2xl border border-white/5 relative group" onclick="toggleService(this)">
+                                    <div class="absolute top-4 right-4 w-5 h-5 rounded border border-white/20 flex items-center justify-center transition-colors check-icon-container">
+                                        <i data-lucide="check" class="w-3 h-3 check-icon"></i>
+                                    </div>
+                                    <h4 class="font-bold text-white mb-2 pr-6 service-title">8. Настройка чат-ботов</h4>
+                                    <p class="text-sm text-gray-400 font-medium">Создадим помощников в Директе для выдачи материалов 24/7.</p>
+                                </div>
+                                <div class="service-card glass p-6 rounded-2xl border border-white/5 relative group" onclick="toggleService(this)">
+                                    <div class="absolute top-4 right-4 w-5 h-5 rounded border border-white/20 flex items-center justify-center transition-colors check-icon-container">
+                                        <i data-lucide="check" class="w-3 h-3 check-icon"></i>
+                                    </div>
+                                    <h4 class="font-bold text-white mb-2 pr-6 service-title">9. Связка Insta + TG / Max</h4>
+                                    <p class="text-sm text-gray-400 font-medium">Выстроим мост для перелива аудитории из инсты* в мессенджеры.</p>
+                                </div>
+                                <div class="service-card glass p-6 rounded-2xl border border-white/5 relative group" onclick="toggleService(this)">
+                                    <div class="absolute top-4 right-4 w-5 h-5 rounded border border-white/20 flex items-center justify-center transition-colors check-icon-container">
+                                        <i data-lucide="check" class="w-3 h-3 check-icon"></i>
+                                    </div>
+                                    <h4 class="font-bold text-white mb-2 pr-6 service-title">10. Платформы и платежи</h4>
+                                    <p class="text-sm text-gray-400 font-medium">Настройка систем оплаты и LMS-платформ с автодоступом.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA внутри спойлера (Отправка списка в ТГ) -->
+                        <div class="mt-12 text-center">
+                            <button onclick="requestAudit()" class="inline-flex items-center gap-2 px-8 py-4 bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-full font-bold uppercase tracking-widest text-sm text-white transition-all backdrop-blur-sm">
+                                <span>Собрать свой пакет автоматизации</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                            <p class="mt-4 text-[10px] uppercase tracking-wider font-bold text-gray-500">Нажимая кнопку, вы перейдете в Telegram с готовым списком модулей.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок 5: Финальный призыв (Main CTA) -->
+        <section id="cta-section" class="py-24 relative">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" data-aos="zoom-in">
+                <div class="glass-card rounded-[40px] p-8 md:p-14 border border-white/10 text-center relative overflow-hidden">
+                    <!-- Декор -->
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[80px] pointer-events-none"></div>
+                    <div class="absolute bottom-0 left-0 w-64 h-64 bg-accent/20 rounded-full blur-[80px] pointer-events-none"></div>
+                    
+                    <h2 class="text-3xl md:text-5xl font-black mb-6 relative z-10 uppercase tracking-tight">Готовы сделать из своего аккаунта <span class="text-gradient">машину по генерации лидов?</span></h2>
+                    <p class="text-gray-400 font-medium text-lg max-w-2xl mx-auto relative z-10">Мы проанализируем вашу нишу и честно скажем, какой результат сможем дать за 30 дней.</p>
+
+                    <!-- Заменено на единственную кнопку, ведущую в TG -->
+                    <div class="mt-10 relative z-10 max-w-sm mx-auto">
+                        <button onclick="requestAudit()" class="w-full inline-flex justify-center items-center gap-2 bg-ig-ai-gradient text-white font-bold uppercase tracking-widest py-5 px-8 rounded-xl transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(221,42,123,0.3)] hover:shadow-[0_0_40px_rgba(221,42,123,0.5)]">
+                            <span>Запросить аудит проекта</span>
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                        </button>
+                        <p class="text-[10px] uppercase tracking-wider font-bold text-gray-500 mt-4">Клик перенаправит вас в защищенный чат Telegram.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-bgDark py-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded bg-ig-ai-gradient flex items-center justify-center">
+                    <i data-lucide="zap" class="text-white w-3 h-3"></i>
+                </div>
+                <span class="font-black tracking-widest uppercase text-gray-300">TurboReels [TR6]</span>
+            </div>
+            <p class="text-gray-500 font-bold uppercase tracking-widest text-[10px] text-center">© 2026 TurboReels [TR6] Просмотры с 6 нулями</p>
+            <div class="flex flex-col items-center md:items-end relative">
+                <button onclick="toggleLegal()" class="text-gray-500 hover:text-white font-bold uppercase tracking-widest text-[10px] transition-colors flex items-center gap-1">
+                    Юридическая информация <i data-lucide="chevron-down" id="legalIcon" class="w-3 h-3 transition-transform"></i>
+                </button>
+                <div id="legalMenu" class="hidden flex-col gap-3 mt-4 md:absolute md:bottom-full md:mb-3 md:right-0 md:mt-0 bg-bgCard border border-white/10 rounded-2xl p-5 min-w-[300px] shadow-2xl z-50 text-left">
+                    <a href="#" class="text-gray-400 hover:text-primary text-[11px] transition-colors uppercase tracking-wider font-bold">Политика конфиденциальности</a>
+                    <a href="#" class="text-gray-400 hover:text-primary text-[11px] transition-colors uppercase tracking-wider font-bold">Пользовательское соглашение</a>
+                    <a href="#" class="text-gray-400 hover:text-primary text-[11px] transition-colors uppercase tracking-wider font-bold">Договор-оферта</a>
+                    <a href="#" class="text-gray-400 hover:text-primary text-[11px] transition-colors uppercase tracking-wider font-bold">Согласие на обработку персональных данных</a>
+                    <a href="#" class="text-gray-400 hover:text-primary text-[11px] transition-colors uppercase tracking-wider font-bold">Реквизиты</a>
+                    <a href="#" class="text-gray-400 hover:text-primary text-[11px] transition-colors uppercase tracking-wider font-bold">Контакты</a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 text-center">
+            <p class="text-[10px] text-gray-600 opacity-60">* Деятельность Meta Platforms Inc. запрещена на территории РФ</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // 1. Инициализация иконок
+        lucide.createIcons();
+
+        // 2. Инициализация скролл-анимаций (AOS)
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+
+        // 3. Эффект прозрачности меню при скролле
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-bgDark/80', 'shadow-lg');
+                nav.classList.remove('border-transparent');
+            } else {
+                nav.classList.remove('bg-bgDark/80', 'shadow-lg');
+                nav.classList.add('border-transparent');
+            }
+        });
+
+        // 4. Спойлер Доп. услуг
+        function toggleServices() {
+            const content = document.getElementById('extraServices');
+            const icon = document.getElementById('toggleIcon');
+            
+            content.classList.toggle('open');
+            
+            if (content.classList.contains('open')) {
+                icon.style.transform = 'rotate(45deg)'; 
+            } else {
+                icon.style.transform = 'rotate(0deg)'; 
+            }
+        }
+
+        // 5. Логика выделения карточек дополнительных услуг
+        function toggleService(element) {
+            element.classList.toggle('selected');
+        }
+
+        // 6. Формирование сообщения с выбранными услугами и переход в Telegram
+        function requestAudit() {
+            const selectedElements = document.querySelectorAll('.service-card.selected .service-title');
+            const selectedServices = Array.from(selectedElements).map(el => el.innerText);
+
+            let message = "Здравствуйте! Я хочу запросить аудит проекта.";
+
+            if (selectedServices.length > 0) {
+                message += "\n\nМеня интересуют следующие дополнительные модули:\n" + selectedServices.map(s => `✅ ${s}`).join('\n');
+            }
+
+            // Перенаправление на @Grmv8 с предзаполненным текстом
+            const tgUrl = `https://t.me/Grmv8?text=${encodeURIComponent(message)}`;
+            window.open(tgUrl, '_blank');
+        }
+
+        // 7. Спойлер юридической информации
+        function toggleLegal() {
+            const menu = document.getElementById('legalMenu');
+            const icon = document.getElementById('legalIcon');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // 8. Интерактивная 3D Модель Смартфона (Захват и Инерция)
+        const phone = document.getElementById('interactivePhone');
+        if (phone) {
+            let isDragging = false;
+            let startX, startY;
+            let currentX = -15; 
+            let currentY = 5;   
+            let vX = 0;         
+            let vY = 0;         
+            let lastMoveTime = 0;
+
+            phone.addEventListener('pointerdown', (e) => {
+                isDragging = true;
+                startX = e.clientX;
+                startY = e.clientY;
+                vX = 0;
+                vY = 0;
+            });
+
+            window.addEventListener('pointermove', (e) => {
+                if (!isDragging) return;
+                const deltaX = e.clientX - startX;
+                const deltaY = e.clientY - startY;
+                vX = deltaX * 0.4; 
+                vY = -deltaY * 0.4; 
+                currentX += vX;
+                currentY += vY;
+                startX = e.clientX;
+                startY = e.clientY;
+                lastMoveTime = Date.now();
+            });
+
+            window.addEventListener('pointerup', () => {
+                if (!isDragging) return;
+                isDragging = false;
+                if (Date.now() - lastMoveTime > 50) {
+                    vX = 0;
+                    vY = 0;
+                }
+            });
+
+            function animatePhone() {
+                if (!isDragging) {
+                    currentX += vX;
+                    currentY += vY;
+                    vX *= 0.94; 
+                    vY *= 0.94;
+                    if (Math.abs(vX) < 0.02 && Math.abs(vY) < 0.02) {
+                        currentX += 0.08; 
+                        currentY += (5 - currentY) * 0.02; 
+                    }
+                }
+                currentY = Math.max(-40, Math.min(40, currentY));
+                phone.style.transform = `perspective(1000px) rotateY(${currentX}deg) rotateX(${currentY}deg)`;
+                requestAnimationFrame(animatePhone);
+            }
+            animatePhone();
+        }
+
+        // 9. Интерактивная Нейронная Сеть на фоне
+        const canvas = document.getElementById('neuralMesh');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let particles = [];
+        let particleCount = 80; 
+        const connectionDistance = 150;
+        const mouseConnectionDistance = 250;
+        let mouse = { x: -1000, y: -1000 };
+        let targetMouse = { x: -1000, y: -1000 };
+
+        function initMesh() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            particleCount = Math.min(Math.floor(window.innerWidth / 15), 120); 
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    vx: (Math.random() - 0.5) * 1.2,
+                    vy: (Math.random() - 0.5) * 1.2,
+                    baseVx: (Math.random() - 0.5) * 1.2,
+                    baseVy: (Math.random() - 0.5) * 1.2,
+                    radius: Math.random() * 1.5 + 0.5
+                });
+            }
+        }
+
+        window.addEventListener('resize', initMesh);
+        window.addEventListener('mousemove', (e) => {
+            targetMouse.x = e.clientX;
+            targetMouse.y = e.clientY;
+        });
+        window.addEventListener('touchmove', (e) => {
+            targetMouse.x = e.touches[0].clientX;
+            targetMouse.y = e.touches[0].clientY;
+        }, { passive: true });
+        window.addEventListener('touchend', () => { targetMouse.x = -1000; targetMouse.y = -1000; });
+        window.addEventListener('mouseout', () => { targetMouse.x = -1000; targetMouse.y = -1000; });
+
+        function animateMesh() {
+            requestAnimationFrame(animateMesh);
+            ctx.clearRect(0, 0, width, height);
+            mouse.x += (targetMouse.x - mouse.x) * 0.1;
+            mouse.y += (targetMouse.y - mouse.y) * 0.1;
+
+            for (let i = 0; i < particles.length; i++) {
+                let p = particles[i];
+                p.x += p.vx; p.y += p.vy;
+                p.vx += (p.baseVx - p.vx) * 0.03; p.vy += (p.baseVy - p.vy) * 0.03;
+                if (p.x < 0 || p.x > width) { p.vx *= -1; p.baseVx *= -1; p.x = Math.max(0, Math.min(width, p.x)); }
+                if (p.y < 0 || p.y > height) { p.vy *= -1; p.baseVy *= -1; p.y = Math.max(0, Math.min(height, p.y)); }
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.15)';
+                ctx.fill();
+
+                for (let j = i + 1; j < particles.length; j++) {
+                    let p2 = particles[j];
+                    let dx = p.x - p2.x; let dy = p.y - p2.y;
+                    let dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < connectionDistance) {
+                        ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p2.x, p2.y);
+                        let opacity = 1 - (dist / connectionDistance);
+                        ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.1})`; ctx.stroke();
+                    }
+                }
+
+                let dxMouse = p.x - mouse.x; let dyMouse = p.y - mouse.y;
+                let distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
+                if (distMouse < mouseConnectionDistance) {
+                    ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y);
+                    let opacity = 1 - (distMouse / mouseConnectionDistance);
+                    ctx.strokeStyle = `rgba(221, 42, 123, ${opacity * 0.4})`; 
+                    ctx.stroke();
+
+                    let force = (mouseConnectionDistance - distMouse) / mouseConnectionDistance;
+                    p.vx += (dxMouse / distMouse) * force * 0.3;
+                    p.vy += (dyMouse / distMouse) * force * 0.3;
+                }
+            }
+        }
+        
+        initMesh();
+        animateMesh();
+
+        // 10. Динамический счетчик просмотров на телефоне
+        function startViewCounter() {
+            const counterEl = document.getElementById('dynamicViewsCounter');
+            if (!counterEl) return;
+
+            let startTime = null;
+
+            function updateCounter(timestamp) {
+                if (!startTime) startTime = timestamp;
+                const elapsed = timestamp - startTime;
+
+                let currentValue = 200;
+
+                // Настраиваем фазы (скорость уменьшена в 3 раза):
+                const t1 = 3600;  // 3.6 сек: быстрый набор от 200 до 1 млн
+                const t2 = t1 + 7500; // 7.5 сек: средний набор от 1 млн до 3 млн
+                const t3 = t2 + 15000; // 15.0 сек: медленный набор до 11 111 111 с эффектом торможения
+                const t4 = t3 + 5000; // 5.0 сек: пауза на финальной цифре перед перезапуском
+
+                if (elapsed < t1) {
+                    // Фаза 1 (Быстро)
+                    const progress = elapsed / t1;
+                    currentValue = 200 + (1000000 - 200) * progress;
+                } else if (elapsed < t2) {
+                    // Фаза 2 (Средне)
+                    const progress = (elapsed - t1) / (t2 - t1);
+                    currentValue = 1000000 + (3000000 - 1000000) * progress;
+                } else if (elapsed < t3) {
+                    // Фаза 3 (Медленно с затуханием - easeOutCubic)
+                    const progress = (elapsed - t2) / (t3 - t2);
+                    const easeOutProgress = 1 - Math.pow(1 - progress, 3);
+                    currentValue = 3000000 + (11111111 - 3000000) * easeOutProgress;
+                } else if (elapsed < t4) {
+                    // Фаза 4 (Пауза)
+                    currentValue = 11111111;
+                } else {
+                    // Перезапуск цикла
+                    startTime = timestamp;
+                    currentValue = 200;
+                }
+
+                // Форматируем число с пробелами (например, 11 111 111)
+                counterEl.textContent = Math.floor(currentValue).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                requestAnimationFrame(updateCounter);
+            }
+
+            requestAnimationFrame(updateCounter);
+        }
+        
+        // Запускаем счетчик
+        startViewCounter();
+    </script>
 </body>
 </html>
